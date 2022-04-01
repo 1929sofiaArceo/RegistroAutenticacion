@@ -1,0 +1,9 @@
+<div>
+    <p *ngFor="let msg of messages">{{msg}}</p>
+    <p class="empty" *ngIf="messages.length==0">No hay mensaje</p>
+</div>
+
+<form (submit)="send()">
+    <input name="msg" type="text" [(ngModel)]="message">
+    <button [disabled]="!message">Enviar mensaje</button>
+</form>

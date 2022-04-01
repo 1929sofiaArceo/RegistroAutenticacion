@@ -1,0 +1,19 @@
+<div class="mainDiv">
+    <form (submit)="login()">
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" [(ngModel)]="credentials.username" name="username" placeholder="Username">
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="text" [(ngModel)]="credentials.password" name="password" placeholder="Password">
+        </div>
+        <div>
+            <button>LogIn</button>
+        </div>
+        <div>
+            Don't have an account? 
+            <a routerLink = "/signup">Sign up here!</a> 
+        </div>
+    </form>
+</div>

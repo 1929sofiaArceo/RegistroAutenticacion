@@ -1,0 +1,14 @@
+<p>users works!</p>
+<h2>Usuarios</h2>
+<p *ngIf="users.length==0">Cargando...</p>
+<table *ngIf="users.length">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><a routerLink="/posts" [queryParams]="{user:user.id}">Ver posts</a></td>
+    </tr>
+</table>
