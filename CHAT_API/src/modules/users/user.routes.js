@@ -107,15 +107,6 @@ router.get('/:id', userController.getById);
  *           description: The user to create
  *           schema:
  *             type: object
- *             properties:
- *               name:
- *                 type: string
- *               age:
- *                 type: integer
- *               email:
- *                 type: string
- *               password:
- *                 type: string
  *       responses: 
  *         200:
  *           description: User was created succesfully

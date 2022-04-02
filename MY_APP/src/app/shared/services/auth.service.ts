@@ -20,6 +20,6 @@ export class AuthService {
   }
 
   remove(): void{
-    
+    localStorage.removeItem('token'); //cerramos sesion
   }
 }

@@ -1,25 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
-import { User } from '../interfaces/user'; //interfaz que me especifica parametros
 import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private users : User[] = [
-    {name: 'Sofia Arceo', email: 'sofi@hotmail.com'},
-    {name: 'Frida Arceo', email: 'frida@hotmail.com'}
-  ];
+  // private users : User[] = [
+  //   {name: 'Sofia Arceo', email: 'sofi@hotmail.com', username: 'sofiArceo'},
+  //   {name: 'Frida Arceo', email: 'frida@hotmail.com', username: 'fridaArceo'}
+  // ];
 
   constructor(private httpClient: HttpClient) { 
 
   }
 
   getUsers(): Observable<any>{
-    const url = 'https://jsonplaceholder.typicode.com/users';
-    return this.httpClient.get(url);
+    const url = environment.socketUrl+'/api/users';
+    return this.httpClient.get(url); //obtenemos usuarios haciendo get a la api
   }
 }

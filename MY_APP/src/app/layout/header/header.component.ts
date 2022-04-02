@@ -17,6 +17,6 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
-    
+    this.authService.remove();
   };
 }

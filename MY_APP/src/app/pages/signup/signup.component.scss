@@ -4,3 +4,58 @@ div{
 input .ng-dirty .ng-touched{
     border: solid 1px red; 
 }
+form{
+    border: solid 1.5px black;
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    background-color: rgb(240, 250, 250);
+}
+form > h3{
+    text-align: center;
+}
+.signup {
+    margin: 5%;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+.signup:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+.invalid{
+    padding: 10px;
+    background-color: lightyellow;
+    // height: 15px;
+    margin-left: 5%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 1px black;
+}
+.valid{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: lightseagreen;
+    // height: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 1px black;
+}
+.iconUser{
+    width: 15%;
+}

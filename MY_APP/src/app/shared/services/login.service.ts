@@ -10,9 +10,15 @@ export class LoginService {
   login(credentials: any): Promise<any>{
     return new Promise((resolve, reject) =>{
       setTimeout(()=>{
-        resolve({
-          token: '383994820394840'
-        })
+        if(credentials.username == 'Arceo'){
+          resolve({
+            token: '8493489430',
+            username: credentials.username,
+            password: credentials.password
+          })
+        }else{
+          reject('usuario erroneo')
+        }
       }, 1000);
     })
   }

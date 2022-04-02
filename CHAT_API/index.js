@@ -5,14 +5,16 @@ const path = require('path');
 const apiRoutes = require('./src/routes');
 const bodyParser = require('body-parser');
 const socketIo = require('socket.io');
+let cors = require("cors");
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 //init app
 const app = express();
 app.use(bodyParser.json());
-//set endpoints
+app.use(cors());
 
+//set endpoints
 app.get('/', (req, res) => {
     const indexPath = path.join(__dirname, 'src/views/', 'index.html');
     res.sendFile(indexPath);
@@ -59,6 +61,15 @@ Database.connect().then((client) =>{
         socket.on('newMessage', (data)=>{
             console.log('Hay nuevo mensaje', data);
             socket.broadcast.emit('recieveMessage', data);
+        });
+        //Trying to Login
+        socket.on('enviarDatos', (credentials)=>{
+            console.log('Hay nuevas credenciales', credentials);
+            socket.broadcast.emit('recieveCredentials', credentials);
+        });
+        //Trying to SignUp (Register)
+        socket.on('datosRegistro', (data)=>{
+            console.log('Datos de registro recibidos', data);
         });
     });
 
