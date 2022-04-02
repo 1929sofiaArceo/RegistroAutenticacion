@@ -33,7 +33,10 @@ class User {
                     reject('Email o contra incorrectas');
                 }
                 else{
-                    // const token = jwt.sign({email: emailParam, password: passwParam}, process.env.TOKEN, {expiresIn: 60 * 60});
+                    console.log(result);
+                    // const token = jwt.sign(result, process.env.TOKEN, {expiresIn: 60 * 60});
+                    // result.token = token;
+                    console.log(result);
                     success(result);
                 }
             })

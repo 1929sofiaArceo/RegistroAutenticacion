@@ -2,8 +2,8 @@
 //Select db
 //Select collection
 const MongoClient = require('mongodb').MongoClient;
-
-const mongoUrl = 'mongodb+srv://sofiaArceo:190501sofia@cluster0.oyekv.mongodb.net/iteso_2022?retryWrites=true&w=majority';
+const env = require("dotenv").config();
+const mongoUrl = process.env.MONGO_URL;
 let database; //para poder usarla en todo el archivo
 module.exports = {
     connect: () => {

@@ -39,3 +39,13 @@ form{
     color: #fff;
     transform: translateY(-7px);
   }
+
+.invalidField{
+    border: solid .5px black;
+    width: 90%;
+    background-color: red;
+}
+.CamposIncompletos{
+    width: 90%;
+    background-color: yellow;
+}

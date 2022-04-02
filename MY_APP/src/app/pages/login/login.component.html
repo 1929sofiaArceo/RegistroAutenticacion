@@ -13,6 +13,12 @@
         <div>
             <button class="login">LogIn</button>
         </div>
+        <div class="invalidField">
+            <span *ngIf="flagUnauthorized">Password or email invalid</span>
+        </div>
+        <div class="CamposIncompletos">
+            <span *ngIf="flagBadLogin">Campos incompletos</span>
+        </div>
         <div>
             Don't have an account? 
             <a routerLink = "/signup">Sign up here!</a> 

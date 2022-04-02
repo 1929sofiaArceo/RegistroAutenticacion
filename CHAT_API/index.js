@@ -5,6 +5,7 @@ const path = require('path');
 const apiRoutes = require('./src/routes');
 const bodyParser = require('body-parser');
 const socketIo = require('socket.io');
+const env = require("dotenv").config();
 let cors = require("cors");
 
 const swaggerJsDoc = require('swagger-jsdoc');

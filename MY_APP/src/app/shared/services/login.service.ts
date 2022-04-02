@@ -11,7 +11,6 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-
   login(credentials: any): Observable<any>{
     const url = environment.socketUrl+'/api/users/signIn';
     return this.httpClient.post(url, credentials); //mandamos usuario a la api para que verifique credenciales
