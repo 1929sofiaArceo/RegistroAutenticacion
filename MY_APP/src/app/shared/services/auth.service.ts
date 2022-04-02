@@ -20,6 +20,7 @@ export class AuthService {
   }
 
   remove(): void{
+    console.log("pass");
     localStorage.removeItem('token'); //cerramos sesion
   }
 }

@@ -115,7 +115,7 @@ router.get('/:id', userController.getById);
 
  /**
  * @swagger
- *   /api/users/singIn:
+ *   /api/users/signIn:
  *     post:
  *       tags:
  *       - Users
@@ -129,11 +129,6 @@ router.get('/:id', userController.getById);
  *           description: The user account to login
  *           schema:
  *             type: object
- *             properties:
- *               email:
- *                 type: string
- *               password:
- *                 type: string
  *       responses: 
  *         200:
  *           description: Login succesfully

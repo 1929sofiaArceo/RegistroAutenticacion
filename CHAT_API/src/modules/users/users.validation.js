@@ -3,6 +3,7 @@ const User = require('./user.model');
 
 const userValidation = {
     signIn: (req, res) =>{
+        console.log(req.body.email, req.body.password);
         const user = new User();
         user.signInUser(req.body.email, req.body.password).then((results) => {
             if(results){

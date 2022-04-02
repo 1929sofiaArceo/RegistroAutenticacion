@@ -27,11 +27,14 @@ class User {
     }
     signInUser(emailParam, passwParam){
         return new Promise((success, reject) =>{
+            // console.log(this.collection.findOne({email: emailParam, password: passwParam}));
             this.collection.findOne({email: emailParam, password: passwParam}, function(err, result){
-                if(err) reject(err);
+                if(err){
+                    reject('Email o contra incorrectas');
+                }
                 else{
-                    const token = jwt.sign({email: emailParam, password: passwParam}, process.env.TOKEN, {expiresIn: 60 * 60});
-                    success(token);
+                    // const token = jwt.sign({email: emailParam, password: passwParam}, process.env.TOKEN, {expiresIn: 60 * 60});
+                    success(result);
                 }
             })
         })

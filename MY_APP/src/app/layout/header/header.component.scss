@@ -8,7 +8,12 @@ h1{
     padding: 25px;
 }
 .cerrarSesion{
+    color: white;
     position:absolute;
     right:10%;
     top:5%;
+    background-color: red;
+    border: solid 1px white;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }

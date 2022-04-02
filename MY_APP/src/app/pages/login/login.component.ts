@@ -31,14 +31,13 @@ export class LoginComponent implements OnInit {
   login(){
     console.log('enviar datos', this.credentials);
     this.socketClient.emit('enviarDatos', this.credentials);
-    this.loginService.login(this.credentials).then(response =>{
+
+    this.loginService.login(this.credentials).subscribe(response =>{
+      console.log('Hola');
+      console.log(response);
       this.authService.save(response.token),
       this.router.navigate(['/home']);
-      console.log(response);
-    }).catch(error=>{
-      console.log('datos incorrectos');
-
-    });;
+    });
   }
 
 }
